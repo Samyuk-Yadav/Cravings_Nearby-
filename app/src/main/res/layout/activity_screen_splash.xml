@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF8C60"
+    tools:context="Screen_Splash">
+
+
+  <com.airbnb.lottie.LottieAnimationView
+      android:id="@+id/Logo_anim"
+      android:layout_width="match_parent"
+      android:layout_height="324dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="20dp"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      app:lottie_rawRes="@raw/logo" />
+
+  <TextView
+      android:id="@+id/Title"
+      android:layout_width="336dp"
+      android:layout_height="75dp"
+      android:layout_below="@id/Logo_anim"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginStart="46dp"
+      android:layout_marginTop="25dp"
+      android:layout_marginEnd="29dp"
+      android:fontFamily="@font/berkshire_swash"
+      android:text="Cravings Nearby!"
+      android:textAlignment="center"
+      android:textColor="@color/black"
+      android:textSize="42sp"
+      android:textStyle="bold" />
+
+  <TextView
+      android:id="@+id/subheading"
+      android:layout_width="293dp"
+      android:layout_height="45dp"
+      android:layout_below="@+id/Title"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginStart="57dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="61dp"
+      android:fontFamily="@font/alatsi"
+      android:text="Tummy Calls Me?"
+      android:textAlignment="center"
+      android:textColor="@color/black"
+      android:textSize="29sp"
+      android:textStyle="normal" />
+
+  <TextView
+      android:id="@+id/Author"
+      android:layout_width="332dp"
+      android:layout_height="68dp"
+      android:layout_below="@+id/subheading"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginStart="37dp"
+      android:layout_marginTop="141dp"
+      android:layout_marginEnd="40dp"
+      android:fontFamily="@font/alatsi"
+      android:text="Powered By Samyuk Yadav"
+      android:textAlignment="center"
+      android:textSize="20sp" />
+
+
+</RelativeLayout>
