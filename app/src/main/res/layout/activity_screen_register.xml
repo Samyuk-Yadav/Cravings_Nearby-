@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="#AFDDF6"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Screen_Register">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="3dp"
+        android:padding="3dp"
+        android:paddingStart="3dp"
+        android:src="@drawable/back_arrow1" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/RLogo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="15dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/register_logo" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/alatsi"
+        android:gravity="center"
+        android:text="New User? Sign In Here!"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/userNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="User Name"
+        android:textColor="@color/black"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Email ID"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/already_Have_an_Account_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="13dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Already have an account? Click Here!"
+        android:textColor="@color/black"
+        android:textStyle="normal"/>
+
+    <Button
+        android:id="@+id/button_Register"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_layout"
+        android:padding="10dp"
+        android:text="Register"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="14dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Or, Register using"
+        android:textStyle="normal"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingVertical="5dp">
+
+        <Button
+            android:id="@+id/button_Google_Register"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/white"
+            android:padding="15dp"
+            android:text="Google"
+            android:textColor="@color/black"
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/button_Facebook_Register"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="#2196F3"
+            android:padding="15dp"
+            android:text="Facebook"
+            android:textColor="@color/white"
+            app:cornerRadius="5dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

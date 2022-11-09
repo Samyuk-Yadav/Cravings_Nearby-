@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="#AFDDF6"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Screen_Login"
+    android:transitionName="login_transition">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="3dp"
+        android:padding="3dp"
+        android:paddingStart="3dp"
+        android:src="@drawable/back_arrow1" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/LLogo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="3dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/login_logo" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/alatsi"
+        android:gravity="center"
+        android:text="Login"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Enter the Username"
+        android:background="@color/white"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        android:layout_margin="5dp"
+        android:textColorHint="@color/black"
+        app:startIconDrawable="@drawable/username"
+        app:endIconTint="@color/black"
+        app:startIconTint="@color/black"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:fontFamily="@font/alatsi"
+            android:textColor="@color/black" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Login Password"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:startIconDrawable="@drawable/password"
+        android:background="@color/white"
+        android:textColorHint="@color/black"
+        android:layout_margin="5dp"
+        app:endIconTint="@color/black"
+        app:startIconTint="@color/black"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:fontFamily="@font/alatsi"
+            android:textColor="@color/black" />
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <CheckBox
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:buttonTint="@color/black"
+            android:layout_gravity="left"
+            android:text="Remember Me!"
+            android:textColor="@color/black">
+
+        </CheckBox>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:background="#AFDDF6"
+            android:text="Forgot Password?" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView_Do_not_have_an_account_Click_Here."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="Do not have an account? Click Here!" />
+
+    <Button
+        android:id="@+id/button_Login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/button_layout"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Login"
+        app:cornerRadius="15dp" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Or, Login using" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        android:paddingVertical="5dp">
+
+        <Button
+            android:id="@+id/button_Google_SignIn"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/white"
+            android:padding="15dp"
+            android:text="Google"
+            android:textColor="@color/black"
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/button_Facebook_SignIn"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="#2196F3"
+            android:padding="15dp"
+            android:text="Facebook"
+            android:textColor="@color/white"
+            app:cornerRadius="5dp" />
+
+
+    </LinearLayout>
+</LinearLayout>
