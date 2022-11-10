@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="2dp"
     android:layout_marginRight="2dp"
-    android:background="#AFDDF6"
+    android:background="@color/Background"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Screen_Login"
@@ -29,7 +29,7 @@
         android:layout_height="170dp"
         android:layout_marginTop="1dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="2dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/login_logo" />
@@ -38,7 +38,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="3dp"
         android:fontFamily="@font/alatsi"
         android:gravity="center"
         android:text="Login"
@@ -50,14 +50,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Enter the Username"
+        android:hint="Enter your Email ID.."
         android:background="@color/white"
         app:hintTextColor="@color/black"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
         android:layout_margin="5dp"
         android:textColorHint="@color/black"
-        app:startIconDrawable="@drawable/username"
+        app:startIconDrawable="@drawable/email"
         app:endIconTint="@color/black"
         app:startIconTint="@color/black"
         app:endIconMode="clear_text">
@@ -68,7 +68,6 @@
             android:inputType="text"
             android:fontFamily="@font/alatsi"
             android:textColor="@color/black" />
-
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,10 +95,9 @@
             android:fontFamily="@font/alatsi"
             android:textColor="@color/black" />
 
-
-
-
     </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -148,7 +146,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="3dp"
         android:background="@drawable/button_layout"
         android:padding="15dp"
         android:textColor="@color/black"

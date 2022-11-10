@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="2dp"
     android:layout_marginRight="2dp"
-    android:background="#AFDDF6"
+    android:background="@color/Background"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Screen_Register">
@@ -43,44 +43,87 @@
         android:textSize="21sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/userNameText"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginBottom="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Enter your Name"
         android:background="@color/white"
-        android:ems="10"
-        android:hint="User Name"
-        android:textColor="@color/black"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textSize="20sp" />
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        android:layout_margin="5dp"
+        android:textColorHint="@color/black"
+        app:startIconDrawable="@drawable/username"
+        app:endIconTint="@color/black"
+        app:startIconTint="@color/black"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:fontFamily="@font/alatsi"
+            android:textColor="@color/black" />
 
 
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginBottom="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Enter your Email ID.."
         android:background="@color/white"
-        android:ems="10"
-        android:hint="Email ID"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textSize="20sp" />
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        android:layout_margin="5dp"
+        android:textColorHint="@color/black"
+        app:startIconDrawable="@drawable/email"
+        app:endIconTint="@color/black"
+        app:startIconTint="@color/black"
+        app:endIconMode="clear_text">
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:fontFamily="@font/alatsi"
+            android:textColor="@color/black" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Login Password"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:startIconDrawable="@drawable/password"
         android:background="@color/white"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:textSize="20sp" />
+        android:textColorHint="@color/black"
+        android:layout_margin="5dp"
+        app:endIconTint="@color/black"
+        app:startIconTint="@color/black"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:fontFamily="@font/alatsi"
+            android:textColor="@color/black" />
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/already_Have_an_Account_Text"
