@@ -16,11 +16,13 @@ public class Screen_Splash extends AppCompatActivity {
 
     private static int SPLASH_SCREEN = 4000;
 
+    //Animations
     Animation blast_animation;
     Animation botum_animation;
     Animation elside_animation;
     Animation erside_animation;
 
+    //Variables
     View logo_anim;
     TextView title;
     TextView subheading;

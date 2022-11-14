@@ -17,7 +17,7 @@
         android:padding="4dp">
 
         <ImageView
-            android:id="@+id/back_btn"
+            android:id="@+id/back_btn1"
             android:layout_width="54dp"
             android:layout_height="48dp"
             android:layout_gravity="left"
@@ -65,6 +65,7 @@
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="3dp"
@@ -92,6 +93,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="3dp"
@@ -119,6 +121,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -186,7 +189,7 @@
         android:paddingVertical="5dp">
 
         <Button
-            android:id="@+id/button_Google_Register"
+            android:id="@+id/button_1Google_Register"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
@@ -197,7 +200,7 @@
             app:cornerRadius="5dp" />
 
         <Button
-            android:id="@+id/button_Facebook_Register"
+            android:id="@+id/button_1Facebook_Register"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"

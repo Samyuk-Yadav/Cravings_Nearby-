@@ -17,7 +17,7 @@
         android:padding="4dp">
 
     <ImageView
-        android:id="@+id/back_btn"
+        android:id="@+id/back_btn_register"
         android:layout_width="54dp"
         android:layout_height="48dp"
         android:layout_gravity="left"
@@ -83,6 +83,7 @@
 
 
             <RadioGroup
+                android:id="@+id/group_radio"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -92,34 +93,37 @@
                     android:id="@+id/radioButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male ♂"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
                     android:layout_marginRight="6dp"
+                    android:layout_weight="1"
                     android:paddingHorizontal="7dp"
-                    android:layout_weight="1"/>
+                    android:text="Male ♂"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Female ♀"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
                     android:layout_marginRight="6dp"
+                    android:layout_weight="1"
                     android:paddingHorizontal="7dp"
-                    android:layout_weight="1"/>
+                    android:text="Female ♀"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Other ⚥"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
                     android:layout_marginRight="6dp"
+                    android:layout_weight="1"
                     android:paddingHorizontal="7dp"
-                    android:layout_weight="1"/>
+                    android:text="Other ⚥"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </RadioGroup>
 
@@ -141,6 +145,7 @@
             android:layout_marginBottom="9dp"/>
 
         <DatePicker
+            android:id="@+id/picker_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnersShown="true"
@@ -186,7 +191,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Or, Login using"
+        android:text="If Already a User? Login using"
         android:textStyle="normal"
         android:layout_marginBottom="5dp"
         android:textColor="@color/black"/>
