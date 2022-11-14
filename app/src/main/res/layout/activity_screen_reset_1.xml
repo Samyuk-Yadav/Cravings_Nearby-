@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/Background"
     android:padding="5dp"
-    tools:context=".Screen_Reset">
+    tools:context=".Screen_Reset_1">
 
     <ImageView
         android:id="@+id/back_forgot"
         android:layout_width="64dp"
         android:layout_height="40dp"
-        android:layout_marginTop="4dp"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/back_arrow1"
         app:layout_constraintBottom_toTopOf="@+id/RLogo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,8 @@
         android:id="@+id/RLogo"
         android:layout_width="221dp"
         android:layout_height="155dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
@@ -43,8 +44,8 @@
         android:id="@+id/imageView2"
         android:layout_width="197dp"
         android:layout_height="122dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -58,22 +59,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="Forgot Password \n Don't Worry!"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RLogo"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.537" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="335dp"
+        android:layout_width="345dp"
         android:layout_height="31dp"
-        android:layout_marginBottom="46dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="Enter your Email to Reset Password"
         android:textColor="@color/black"
@@ -81,38 +85,58 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/emailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailAddress"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:gravity="center"
-        android:hint="Enter Email Address..."
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:inputType="textEmailAddress"
+        android:layout_margin="3dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:hint="Enter your Email ID.."
+        android:textColorHint="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button_rst"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:startIconDrawable="@drawable/email"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/alatsi"
+            android:inputType="text"
+            android:textColor="@color/black" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/button_rst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:padding="15dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="14dp"
         android:background="@drawable/button_layout"
+        android:padding="15dp"
         android:text="Reset PassWord"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/emailAddress"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/emailAddress" />
+        app:layout_constraintStart_toStartOf="@+id/emailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:padding="5dp"
+    tools:context=".Screen_Reset_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="6dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/back_arrow1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:layout_margin="6dp"
+            android:fontFamily="@font/abril_fatface"
+            android:text="Make your \nSelection"
+            android:textAllCaps="true"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ResetLogo2"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_margin="3dp"
+                app:layout_constraintVertical_bias="0.0"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/reset_logo_2" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Select your way to reset your \n 🔒 Password 🔒"
+            android:textSize="25sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:padding="6dp"
+            android:layout_marginTop="23dp"
+            android:background="@color/DarkBlueBackground">
+
+            <ImageView
+                android:id="@+id/phone1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/phone"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="22dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Get SMS Code to:"
+                android:layout_toRightOf="@id/phone1"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/text_description1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="+44771722151515"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/phone1"
+                android:layout_below="@id/text1"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/button_SMS"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/flag_transparent"/>
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:padding="6dp"
+            android:layout_marginTop="23dp"
+            android:background="@color/DarkBlueBackground">
+
+
+            <ImageView
+                android:id="@+id/phone2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/email"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="22dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Get Mail Code to:"
+                android:layout_toRightOf="@id/phone2"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/text_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Mail@live.tees.ac.uk"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/phone2"
+                android:layout_below="@id/text2"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/button_Mail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/flag_transparent"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

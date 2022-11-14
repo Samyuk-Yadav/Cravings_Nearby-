@@ -13,6 +13,41 @@
         android:theme="@style/Theme.CravingsNearby"
         tools:targetApi="31">
         <activity
+            android:name=".Screen_Reset_3"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Screen_Reset_2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Screen_Reset_1"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Screen_Register_3"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Screen_OTP"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Screen_Settings_user"
             android:exported="false">
             <meta-data
@@ -34,7 +69,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Screen_Register"
+            android:name=".Screen_Register_1"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Screen_Register_2"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -54,11 +96,8 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-
-
         <activity
-            android:name=".Screen_Reset"
+            android:name=".Screen_Reset_4"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
