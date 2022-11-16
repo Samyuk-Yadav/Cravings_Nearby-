@@ -34,7 +34,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Screen_Register_3"
+            android:name=".Screen_Register_2"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -69,14 +69,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Screen_Register_1"
+            android:name=".Screen_Reset_4"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Screen_Register_2"
+            android:name=".Screen_Register_3"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -96,8 +96,10 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+
         <activity
-            android:name=".Screen_Reset_4"
+            android:name=".Screen_Register_1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

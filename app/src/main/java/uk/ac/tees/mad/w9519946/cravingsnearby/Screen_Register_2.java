@@ -38,6 +38,14 @@ public class Screen_Register_2 extends AppCompatActivity {
         Next = findViewById(R.id.button_Next);
         Login = findViewById(R.id.button_Login);
 
+        Back_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Screen_Register_2.this, Screen_Register_1.class);
+                startActivity(i);
+            }
+        });
+
 
     }
 
@@ -76,7 +84,7 @@ public class Screen_Register_2 extends AppCompatActivity {
 
     private boolean genderValidation(){
         if (Group_Radio.getCheckedRadioButtonId() == -1){
-            Toast.makeText(this, "Select your Gender too!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Select your Gender Please!", Toast.LENGTH_SHORT).show();
             return false;
         } else {
             return true;

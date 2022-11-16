@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "91788244724",
+    "project_id": "cravings-nearby-ad3d7",
+    "storage_bucket": "cravings-nearby-ad3d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91788244724:android:88fd6112353e48c61410a1",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.mad.w9519946.cravingsnearby"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91788244724-duu9asnr2vsqb8pnosigtlqt22hdj6nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgUdWPj97b4--0xYoaVLZ_oeHTCxnEwAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91788244724-duu9asnr2vsqb8pnosigtlqt22hdj6nd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

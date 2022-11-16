@@ -163,19 +163,14 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"/>
 
-
-
-
-
-
     </LinearLayout>
-
 
 
     <Button
         android:id="@+id/button_Next"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:onClick="callingNext3Screen"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/button_layout"

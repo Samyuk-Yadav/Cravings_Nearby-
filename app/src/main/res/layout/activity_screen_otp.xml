@@ -14,6 +14,7 @@
         android:padding="25dp">
 
         <ImageView
+            android:id="@+id/close"
             android:layout_width="54dp"
             android:layout_height="48dp"
             android:padding="6dp"
@@ -66,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:text="Enter the code sent to the Mobile Number"
             android:includeFontPadding="true"
             android:textAlignment="center"
@@ -75,6 +76,7 @@
             android:textStyle="bold" />
 
         <com.chaos.view.PinView
+            android:id="@+id/view_Pin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="31dp"
@@ -98,19 +100,28 @@
 
 
         <Button
-            android:id="@+id/button_Next"
+            android:id="@+id/button_NextOTP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:layout_margin="10dp"
             android:layout_marginTop="23dp"
             android:layout_marginBottom="7dp"
             android:background="@drawable/yellow_button"
-            android:padding="14dp"
+            android:padding="11dp"
             android:text="Verify the Code"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:cornerRadius="14dp" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_Progress"
+            android:visibility="invisible"
+            android:layout_gravity="center"/>
+
 
     </LinearLayout>
 

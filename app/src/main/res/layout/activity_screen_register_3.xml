@@ -18,7 +18,7 @@
         android:layout_margin="2dp">
 
     <ImageView
-        android:id="@+id/back_btn"
+        android:id="@+id/back_btn3"
         android:layout_width="54dp"
         android:layout_height="48dp"
         android:gravity="center"
@@ -77,6 +77,7 @@
         android:layout_gravity="center">
 
         <com.hbb20.CountryCodePicker
+            android:id="@+id/desi_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="5dp"
@@ -92,6 +93,7 @@
             android:background="@drawable/border_country_picker"/>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/number_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -127,15 +129,16 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button_Next"
+        android:id="@+id/button_Next_Register"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:onClick="verifyScreen_OTP"
         android:layout_marginTop="23dp"
         android:layout_marginBottom="7dp"
         android:background="@drawable/button_layout"
         android:backgroundTint="@color/yellow"
         android:padding="10dp"
-        android:text="Next"
+        android:text="Register"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:cornerRadius="14dp" />
@@ -144,14 +147,15 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="verifyScreen_OTP"
         android:gravity="center"
-        android:text="Or, Login using"
+        android:text="If Already a User? Login using"
         android:textStyle="normal"
         android:layout_marginBottom="5dp"
         android:textColor="@color/black"/>
 
     <Button
-        android:id="@+id/button_Login"
+        android:id="@+id/button_Register3"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

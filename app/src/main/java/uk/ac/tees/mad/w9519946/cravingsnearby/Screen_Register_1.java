@@ -1,6 +1,7 @@
 package uk.ac.tees.mad.w9519946.cravingsnearby;
 
 import static uk.ac.tees.mad.w9519946.cravingsnearby.R.id.button_1Google_Register;
+import static uk.ac.tees.mad.w9519946.cravingsnearby.R.id.password_1;
 import static uk.ac.tees.mad.w9519946.cravingsnearby.R.id.user_Name;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -91,29 +92,24 @@ public class Screen_Register_1 extends AppCompatActivity {
     }
 
     private boolean passwordValidation() {
-        String passwordCheck = "(?=.*[a-z])" +
-                "(?=.*[0-9])" +
-                "(?=.*[a-zA-z])" +
-                "(?=.*[@#$%^&+=])" +
-                "(?=.*[A-Z])" +
-                ".{6,}" +
-                "$";
+        String passwordCheck = "^(?=[A-Z0-9]*[a-z])(?=[a-zA-Z]*[0-9])(?=[a-z0-9]*[A-Z])[a-zA-Z0-9]{8,}$";
         String details = Password_1.getEditText().getText().toString().trim();
 
         if (details.isEmpty()) {
             Password_1.setError("Empty Field! Enter Password.");
             return false;
-        } else if (passwordCheck.length() > 20) {
-            Password_1.setError("Too big Name!");
-            return false;
+        }else if (details.length() < 6){
+            Password_1.setError("Password Too small, Atleast 6 Chars");
+
         } else if (!details.matches(passwordCheck)) {
-            Password_1.setError("Atleast 6 Digit Password only Allowed");
+            Password_1.setError("Atleast one Captial and small letter, number and no special characters");
             return false;
         } else {
             Password_1.setError(null);
             Password_1.setErrorEnabled(false);
             return true;
         }
+        return false;
     }
 
 
