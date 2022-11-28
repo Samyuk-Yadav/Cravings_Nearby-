@@ -11,23 +11,34 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
+import uk.ac.tees.mad.w9519946.cravingsnearby.Adapter_Classes.Adapter_Fragments;
 import uk.ac.tees.mad.w9519946.cravingsnearby.databinding.ActivityMainBinding;
+import uk.ac.tees.mad.w9519946.cravingsnearby.databinding.ActivityScreenChatBinding;
 
 public class Screen_Chat extends AppCompatActivity {
 
     //variables
-    ActivityMainBinding mainBinding;
+    ActivityScreenChatBinding screenChatBinding;
     FirebaseAuth firebaseAuth;
+    FirebaseDatabase firebaseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(mainBinding.getRoot());
+        screenChatBinding = ActivityScreenChatBinding.inflate(getLayoutInflater());
+        setContentView(screenChatBinding.getRoot());
+        getSupportActionBar().setTitle("               Customer Chats");
+
 
         //Hooks
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+
+        //Tab Layout setup
+        screenChatBinding.pagerIDView.setAdapter(new Adapter_Fragments(getSupportFragmentManager()));
+        screenChatBinding.topLayoutOfTab.setupWithViewPager(screenChatBinding.pagerIDView);
 
 
     }
@@ -49,7 +60,7 @@ public class Screen_Chat extends AppCompatActivity {
 
             case R.id.logout:
                 firebaseAuth.signOut();
-                Intent inte = new Intent(Screen_Chat.this, Screen_Login.class);
+                Intent inte = new Intent(Screen_Chat.this, Restaurant_Login.class);
                 startActivity(inte);
                 break;
 

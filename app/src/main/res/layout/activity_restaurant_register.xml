@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:fontFamily="@font/alatsi"
+        android:fontFamily="@font/berkshire_swash"
         android:gravity="center"
         android:text="New Restaurant? Create account here!"
         android:textSize="21sp"

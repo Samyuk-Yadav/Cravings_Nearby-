@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="3dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Enter your Email ID.."
+        android:hint="Enter your Restaurant Email ID.."
         android:background="@color/white"
         app:hintTextColor="@color/black"
         app:boxStrokeColor="@color/black"
@@ -124,15 +124,49 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/customer_Login_Here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="9dp"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="Customer Login?\nClick Here!"
+            android:textColor="@color/black"
+            android:background="#AFDDF6"
+            android:layout_weight="1"
+            android:textStyle="normal"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="51dp"
+            android:background="@color/black"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="5dp"/>
+
     <Button
         android:id="@+id/forget_passwordl"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="105dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:layout_marginLeft="9dp"
         android:background="#AFDDF6"
-        android:text="Forgot Password?"
+        android:text="Forgot Password?\nClick Here!"
         android:textColor="@color/black"
         android:textSize="16sp"/>
+
+</LinearLayout>
+
 
     <Button
         android:id="@+id/button_Next1"
@@ -167,7 +201,7 @@
         android:paddingVertical="5dp">
 
         <Button
-            android:id="@+id/button_Google_Register"
+            android:id="@+id/button_Google_Login"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
