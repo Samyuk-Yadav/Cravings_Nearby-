@@ -51,6 +51,9 @@ public class Screen_Register_1 extends AppCompatActivity {
 
         //Calling Next Screen
         Intent i = new Intent(Screen_Register_1.this, Screen_Register_2.class);
+        i.putExtra("register_username", Name_1.getEditText().getText().toString().trim());
+        i.putExtra("register_email", Email_1.getEditText().getText().toString().trim());
+        i.putExtra("register_password", Password_1.getEditText().getText().toString().trim());
         startActivity(i);
     }
 

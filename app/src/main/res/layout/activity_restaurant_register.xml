@@ -9,7 +9,7 @@
     android:background="@color/Background"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Screen_Register_1">
+    tools:context=".Restaurant_Register">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,36 +22,41 @@
             android:layout_height="48dp"
             android:layout_gravity="left"
             android:layout_marginLeft="2dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="1dp"
             android:padding="3dp"
             android:paddingStart="3dp"
             android:src="@drawable/back_arrow1" />
 
         <TextView
-            android:id="@+id/textView1_3"
-            android:layout_width="54dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/alatsi"
-            android:layout_marginLeft="270dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="9dp"
+            android:layout_marginBottom="1dp"
+            android:text="New Hotel Register Here!"
+            android:textColor="@color/Orange"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            android:fontFamily="@font/berkshire_swash"
             android:gravity="center"
-            android:layout_gravity="center"
-            android:text="1/3"
-            android:textColor="#000000"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:padding="3dp"
+            android:paddingStart="3dp"
+
+
+            />
 
     </LinearLayout>
 
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/RLogo"
-        android:layout_width="150dp"
+        android:layout_width="160dp"
         android:layout_height="150dp"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="7dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/register_logo" />
+        app:lottie_rawRes="@raw/restaurant_register" />
 
     <TextView
         android:id="@+id/textView1"
@@ -60,24 +65,24 @@
         android:layout_marginBottom="4dp"
         android:fontFamily="@font/alatsi"
         android:gravity="center"
-        android:text="New User? Sign In Here!"
+        android:text="New Restaurant? Create account here!"
         android:textSize="21sp"
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name_1"
+        android:id="@+id/name_restaurant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="3dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Enter your Name"
+        android:hint="Enter your Restaurant Name Here.."
         android:background="@color/white"
         app:hintTextColor="@color/black"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
         android:layout_margin="3dp"
         android:textColorHint="@color/black"
-        app:startIconDrawable="@drawable/username"
+        app:startIconDrawable="@drawable/eat"
         app:endIconTint="@color/black"
         app:startIconTint="@color/black"
         app:endIconMode="clear_text">
@@ -93,7 +98,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_1"
+        android:id="@+id/email_restaurant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="3dp"
@@ -121,7 +126,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_1"
+        android:id="@+id/password_restaurant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -159,7 +164,7 @@
         android:textStyle="normal"/>
 
     <Button
-        android:id="@+id/button_Next1"
+        android:id="@+id/button_Register"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:onClick="callingNext2Screen"
@@ -168,7 +173,7 @@
         android:layout_marginBottom="4dp"
         android:background="@drawable/button_layout"
         android:padding="8dp"
-        android:text="NEXT"
+        android:text="REGISTER"
         android:backgroundTint="@color/yellow"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -191,7 +196,7 @@
         android:paddingVertical="5dp">
 
         <Button
-            android:id="@+id/button_1Google_Register"
+            android:id="@+id/button_Google_Register"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
@@ -203,7 +208,7 @@
             app:cornerRadius="5dp" />
 
         <Button
-            android:id="@+id/button_1Facebook_Register"
+            android:id="@+id/button_Facebook_Register"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"

@@ -147,7 +147,6 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="verifyScreen_OTP"
         android:gravity="center"
         android:text="If Already a User? Login using"
         android:textStyle="normal"

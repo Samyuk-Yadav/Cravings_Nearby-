@@ -35,6 +35,8 @@ public class Screen_Register_3 extends AppCompatActivity {
         Next = findViewById(R.id.button_Next_Register);
         Login = findViewById(R.id.button_Register3);
 
+
+
     }
 
     public void verifyScreen_OTP(View v){
@@ -42,15 +44,20 @@ public class Screen_Register_3 extends AppCompatActivity {
         if (!number_Phone_Validation()){
             return;
         }
-
-        String username_r = getIntent().getStringExtra("register_username");
-        String password_r = getIntent().getStringExtra("register_password");
-        String email_r = getIntent().getStringExtra("register_email");
-        String date_r = getIntent().getStringExtra("register_date");
-        String gender_r = getIntent().getStringExtra("register_gender");
+        Intent intent = getIntent();
+        String username_r = intent.getStringExtra("register_username");
+        String password_r = intent.getStringExtra("register_password");
+        String email_r = intent.getStringExtra("register_email");
+        String date_r = intent.getStringExtra("register_date");
+        String gender_r = intent.getStringExtra("register_gender");
 
         String userGivenNumber = Number_Phone.getEditText().getText().toString().trim();
-        String phone_r = "+" + Picker_Code.getFullNumber() + userGivenNumber;
+//        Log.v("ScreenReg3", Picker_Code.getFullNumber());
+        String s = Picker_Code.getSelectedCountryCodeWithPlus();
+//        Log.v("ScreenReg3", s);
+//        Log.v("ScreenReg3", Picker_Code.getDefaultCountryCodeWithPlus());
+        String phone_r = s + userGivenNumber;
+//        String phone_r = "+" + Picker_Code.getDefaultCountryCode() + userGivenNumber;
 
 
         Intent i = new Intent(Screen_Register_3.this, Screen_OTP.class);
@@ -58,13 +65,10 @@ public class Screen_Register_3 extends AppCompatActivity {
         i.putExtra("register_username", username_r);
         i.putExtra("register_password", password_r);
         i.putExtra("register_email", email_r);
-        i.putExtra("register_username", date_r);
+        i.putExtra("register_date", date_r);
         i.putExtra("register_gender", gender_r);
         i.putExtra("register_phoneNo", phone_r);
-
-
-
-
+        startActivity(i);
 
     }
 

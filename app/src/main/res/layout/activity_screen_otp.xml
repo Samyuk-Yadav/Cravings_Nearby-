@@ -101,6 +101,7 @@
 
         <Button
             android:id="@+id/button_NextOTP"
+            android:onClick="_OTPVerify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="false"

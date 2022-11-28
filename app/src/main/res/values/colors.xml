@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFEB3B</color>
     <color name="light_Yellow" >#FFFACE</color>
+    <color name="Orange" >#FF9800</color>
 
 
 
@@ -17,5 +18,6 @@
     <color name="Background" >#AFDDF6</color>
     <color name="SplashBackground" >#2196F3</color>
     <color name="DarkBlueBackground" >#A7C6DF</color>
+
 
 </resources>

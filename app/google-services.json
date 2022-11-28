@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "91788244724",
+    "firebase_url": "https://cravings-nearby-ad3d7-default-rtdb.firebaseio.com",
     "project_id": "cravings-nearby-ad3d7",
     "storage_bucket": "cravings-nearby-ad3d7.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "91788244724-52o9jch6i2stsfi7hmn6tq6mon7v2fd1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uk.ac.tees.mad.w9519946.cravingsnearby",
+            "certificate_hash": "37d9e4af8f19d5a86547fdc1b88acd45ccb0b43b"
+          }
+        },
         {
           "client_id": "91788244724-duu9asnr2vsqb8pnosigtlqt22hdj6nd.apps.googleusercontent.com",
           "client_type": 3

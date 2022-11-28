@@ -54,6 +54,11 @@ public class Screen_Register_2 extends AppCompatActivity {
         if (!ageValidation() | !genderValidation()){
             return;
         }
+        Intent in = getIntent();
+        String username_r = in.getStringExtra("register_username");
+        String password_r = in.getStringExtra("register_password");
+        String email_r = in.getStringExtra("register_email");
+
 
         Radio_Button = findViewById(Group_Radio.getCheckedRadioButtonId());
         String mfoGender = Radio_Button.getText().toString();
@@ -66,6 +71,11 @@ public class Screen_Register_2 extends AppCompatActivity {
 
 
         Intent i = new Intent(Screen_Register_2.this, Screen_Register_3.class);
+        i.putExtra("register_gender", mfoGender);
+        i.putExtra("register_date", dob);
+        i.putExtra("register_username", username_r);
+        i.putExtra("register_email", email_r);
+        i.putExtra("register_password", password_r);
         startActivity(i);
     }
 

@@ -25,6 +25,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.concurrent.TimeUnit;
 
@@ -35,7 +37,16 @@ public class Screen_OTP extends AppCompatActivity {
     ProgressBar ProgressBar;
     ImageView Close;
     Button Next;
-    FirebaseAuth auth;
+    FirebaseAuth rauth;
+
+    //Global variables Declaration
+    String register_username;
+    String register_password;
+    String register_email;
+    String register_date;
+    String register_gender;
+    String number_phone;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +60,52 @@ public class Screen_OTP extends AppCompatActivity {
         ProgressBar = findViewById(R.id.show_Progress);
         OTP_Pin = findViewById(R.id.view_Pin);
 
-        String number_phone = getIntent().getStringExtra("register_phoneNo");
+        register_username = getIntent().getStringExtra("register_username");
+        register_password = getIntent().getStringExtra("register_password");
+        register_email = getIntent().getStringExtra("register_email");
+        register_date = getIntent().getStringExtra("register_date");
+        register_gender = getIntent().getStringExtra("register_gender");
+
+        number_phone = getIntent().getStringExtra("register_phoneNo");
         ProgressBar.setVisibility(View.VISIBLE);
+
+        mCall = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+            @Override
+            public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
+
+                final String otp = credential.getSmsCode();
+                if (otp != null) {
+
+                    OTP_Pin.setText(otp);
+                    codeVerify(otp);
+                }
+            }
+
+            @Override
+            public void onVerificationFailed(@NonNull FirebaseException e) {
+                // Show a message and update the UI
+                Toast.makeText(Screen_OTP.this, "Verification Successful", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCodeSent(@NonNull String ID, @NonNull PhoneAuthProvider.ForceResendingToken token1) {
+                // Save verification ID and resending token so we can use them later
+                super.onCodeSent(ID, token1);
+                verificationId = ID;
+
+                Toast.makeText(Screen_OTP.this, "Please Verify the Code Sent", Toast.LENGTH_SHORT).show();
+
+
+                Next.setEnabled(true);
+                ProgressBar.setVisibility(View.INVISIBLE);
+            }
+        };
+
         otp_sent_to_user(number_phone);
 
 
-        Next.setOnClickListener(new View.OnClickListener() {
+       /* Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -64,14 +115,14 @@ public class Screen_OTP extends AppCompatActivity {
                     codeVerify(OTP_Pin.getText().toString());
                 }
             }
-        });
+       });   */
 
 
     }
 
     private void otp_sent_to_user(String register_phoneNo) {
         PhoneAuthOptions options =
-                PhoneAuthOptions.newBuilder(auth)
+                PhoneAuthOptions.newBuilder(rauth)
                         .setPhoneNumber(register_phoneNo)       // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
@@ -82,34 +133,9 @@ public class Screen_OTP extends AppCompatActivity {
 
     }
 
-    private PhoneAuthProvider.OnVerificationStateChangedCallbacks
-            mCall = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCall;
 
-        @Override
-        public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
 
-            final String otp = credential.getSmsCode();
-            if (otp != null) {
-                codeVerify(otp);
-            }
-        }
-
-        @Override
-        public void onVerificationFailed(@NonNull FirebaseException e) {
-            // Show a message and update the UI
-            Toast.makeText(Screen_OTP.this, "Verification Successful", Toast.LENGTH_SHORT).show();
-        }
-
-        @Override
-        public void onCodeSent(@NonNull String ID, @NonNull PhoneAuthProvider.ForceResendingToken token1) {
-            // Save verification ID and resending token so we can use them later
-            super.onCodeSent(ID, token1);
-            verificationId = ID;
-            Toast.makeText(Screen_OTP.this, "Please Verify the Code Sent", Toast.LENGTH_SHORT).show();
-            Next.setEnabled(true);
-            ProgressBar.setVisibility(View.INVISIBLE);
-        }
-    };
 
 
     private void codeVerify(String otp) {
@@ -119,14 +145,15 @@ public class Screen_OTP extends AppCompatActivity {
 
     private void credentialSignIn(PhoneAuthCredential credential) {
 
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.signInWithCredential(credential)
+        FirebaseAuth rauth = FirebaseAuth.getInstance();
+        rauth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(Screen_OTP.this, "Successfully Verified!", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(Screen_OTP.this, Screen_Login.class);
+                           // data_Storing_of_New_Users();
+                           // Intent i = new Intent(Screen_OTP.this, Screen_Login.class);
 
                         } else {
 
@@ -140,6 +167,30 @@ public class Screen_OTP extends AppCompatActivity {
                 });
     }
 
+
+    public void _OTPVerify(View v){
+        String OTP_code = OTP_Pin.getText().toString();
+
+        if (!OTP_code.isEmpty()){
+            codeVerify(OTP_code);
+        }
+    }
+
+
+
+
+
+
+
+
+    /*private void data_Storing_of_New_Users() {
+        FirebaseDatabase firebaseDatabase_rooting = FirebaseDatabase.getInstance();
+        DatabaseReference data_ref = firebaseDatabase_rooting.getReference("User_Data");
+
+        data_ref.setValue("Record 1!");
+
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -149,5 +200,5 @@ public class Screen_OTP extends AppCompatActivity {
             startActivity(i);
             finish();
         }
-    }
+    } */
 }
