@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -29,8 +30,8 @@ public class Screen_Chat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         screenChatBinding = ActivityScreenChatBinding.inflate(getLayoutInflater());
         setContentView(screenChatBinding.getRoot());
-        getSupportActionBar().setTitle("               Customer Chats");
-
+      //  getSupportActionBar().setTitle("                 Customer Chats");
+        getSupportActionBar().setTitle(getString(R.string.customer_chat));
 
         //Hooks
         firebaseAuth = FirebaseAuth.getInstance();

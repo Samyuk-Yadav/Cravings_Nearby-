@@ -13,14 +13,14 @@
         app:civ_border_color="#303030"
         android:src="@drawable/user_avatar"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="15dp"
         android:padding="5dp"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="99dp"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:gravity="center"
         android:orientation="vertical">

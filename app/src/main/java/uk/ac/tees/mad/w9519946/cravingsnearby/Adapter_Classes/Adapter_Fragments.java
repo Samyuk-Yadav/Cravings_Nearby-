@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment_Classes.News_Fragments;
-import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment_Classes.User_Restaurant_Calls;
-import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment_Classes.User_Restaurant_Chat;
+import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment.Calls;
+import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment.Chats;
+import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment.News;
 
 public class Adapter_Fragments extends FragmentPagerAdapter {
 
@@ -20,10 +20,10 @@ public class Adapter_Fragments extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position){
-            case 0: return new User_Restaurant_Chat();
-            case 1: return new News_Fragments();
-            case 2: return new User_Restaurant_Calls();
-            default: return new User_Restaurant_Chat();
+            case 0: return new Chats();
+            case 1: return new News();
+            case 2: return new Calls();
+            default: return new Chats();
         }
     }
 
