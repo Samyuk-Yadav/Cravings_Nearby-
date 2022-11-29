@@ -92,7 +92,7 @@ public class Restaurant_Login extends AppCompatActivity {
                         if (task.isSuccessful()){
 
                             Toast.makeText(Restaurant_Login.this, "Successfully Signed In!", Toast.LENGTH_SHORT).show();
-                            Intent inte = new Intent(Restaurant_Login.this, MainActivity.class);
+                            Intent inte = new Intent(Restaurant_Login.this, Screen_Chat.class);
                             startActivity(inte);
                         }
                         else{

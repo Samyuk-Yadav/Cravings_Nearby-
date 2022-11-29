@@ -41,11 +41,14 @@ public class Adapter_Users extends  RecyclerView.Adapter<Adapter_Users.vview_Hol
     //Defining the data from where the users are getting the data...
     public void onBindViewHolder(@NonNull vview_Holder hanger, int position) {
         Users_data data = values.get(position);
+
         //Cronology of the data taken is decided here..
         //Image
         Picasso.get().load(data.getProfile_Pic()).placeholder(R.drawable.user_avatar).into(hanger.pic_Profile);
+
         //UserName
         hanger.name_User.setText(data.getUser_Name());
+
         //User name and Image sent to next chat screen.
         hanger.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -118,6 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginLeft="3dp"
+            android:layout_marginBottom="1dp"
             android:layout_weight="1"
             android:background="@drawable/btn_background"
             android:ems="10"
@@ -129,6 +130,7 @@
             android:id="@+id/btn_sent"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
+            android:layout_marginBottom="1dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:srcCompat="@drawable/btn_send"
@@ -139,7 +141,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerView_Chat"
+        android:id="@+id/recyclerView_Chat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/Base_Linear"

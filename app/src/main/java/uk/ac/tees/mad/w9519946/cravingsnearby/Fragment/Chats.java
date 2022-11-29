@@ -71,12 +71,6 @@ public class Chats extends Fragment {
             }
         });
 
-
-
-
-
-
-
         return fragmentChatsBinding.getRoot();
     }
 }

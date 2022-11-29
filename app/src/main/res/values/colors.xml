@@ -20,6 +20,8 @@
     <color name="SplashBackground" >#2196F3</color>
     <color name="DarkBlueBackground" >#A7C6DF</color>
     <color name="Dark_Blue">#0069BC</color>
+    <color name="Grass_Green">#C1DF9E</color>
+    <color name="Creme">#E6E0DF</color>
 
 
 </resources>
