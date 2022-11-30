@@ -49,7 +49,7 @@ public class Adapter_Users extends  RecyclerView.Adapter<Adapter_Users.vview_Hol
 
         //Cronology of the data taken is decided here..
         //Image
-        Picasso.get().load(data.getProfile_Pic()).placeholder(R.drawable.user_avatar).into(hanger.pic_Profile);
+        Picasso.get().load(data.getProfile_Pic()).placeholder(R.drawable.user_image).into(hanger.pic_Profile);
 
         //UserName
         hanger.name_User.setText(data.getUser_Name());

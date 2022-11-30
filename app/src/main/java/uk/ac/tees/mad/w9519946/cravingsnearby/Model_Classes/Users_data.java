@@ -5,6 +5,7 @@ public class Users_data {
     //Variables
     String User_Name;
     String Email;
+    String Restaurant_User_Info;
     String Password;
     String id_User;
     String profile_Pic;
@@ -33,12 +34,13 @@ public class Users_data {
     }
 
     //Setter and Getter
+
     public String getUser_Name() {
         return User_Name;
     }
 
-    public void setUser_Name(String user_Name) {
-        this.User_Name = user_Name;
+    public void setUser_Name(String User_Name) {
+        this.User_Name = User_Name;
     }
 
     public String geteMail() {
@@ -79,5 +81,13 @@ public class Users_data {
 
     public void setLast_Message(String last_Message) {
         this.last_Message = last_Message;
+    }
+
+    public String getRestaurant_User_Info() {
+        return Restaurant_User_Info;
+    }
+
+    public void setRestaurant_User_Info(String restaurant_User_Info) {
+        Restaurant_User_Info = restaurant_User_Info;
     }
 }

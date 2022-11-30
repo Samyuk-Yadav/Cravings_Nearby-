@@ -80,6 +80,16 @@ public class Restaurant_Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                if (loginBinding.emailRestaurant.getEditText().getText().toString().isEmpty()){
+                    loginBinding.emailRestaurant.setError("Cannot leave it blank!");
+                    return;
+                }
+
+                if (loginBinding.passwordRestaurant.getEditText().getText().toString().isEmpty()){
+                    loginBinding.passwordRestaurant.setError("Cannot leave it blank!");
+                    return;
+                }
+
                 dialog.show();
 
                 firebase1Auth.signInWithEmailAndPassword(loginBinding.emailRestaurant.getEditText().getText().toString(),

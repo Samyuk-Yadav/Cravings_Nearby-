@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -60,7 +61,8 @@ public class Chats extends Fragment {
                 for (DataSnapshot snapshot_data : snapshot.getChildren()){
                     Users_data usersData = snapshot_data.getValue(Users_data.class);
                     usersData.setId_User(snapshot_data.getKey());
-                    usersArrayList.add(usersData);
+
+                        usersArrayList.add(usersData);
                 }
                 adapter_users.notifyDataSetChanged();
             }

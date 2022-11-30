@@ -1,8 +1,6 @@
 package uk.ac.tees.mad.w9519946.cravingsnearby;
 
-import static uk.ac.tees.mad.w9519946.cravingsnearby.R.id.button_1Google_Register;
-import static uk.ac.tees.mad.w9519946.cravingsnearby.R.id.password_1;
-import static uk.ac.tees.mad.w9519946.cravingsnearby.R.id.user_Name;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 

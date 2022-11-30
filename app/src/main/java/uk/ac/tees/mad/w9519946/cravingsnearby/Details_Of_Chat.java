@@ -61,7 +61,7 @@ public class Details_Of_Chat extends AppCompatActivity {
         final ArrayList<Msg_data> msg_data = new ArrayList<>();
 
         //Set adapter
-        final Adapter_Chats adapter_chats = new Adapter_Chats(msg_data, this);
+        final Adapter_Chats adapter_chats = new Adapter_Chats(msg_data, id_Reciever, this);
         detailsOfChatBinding.recyclerViewChat.setAdapter(adapter_chats);
 
         //Linear Layout to put chat in line form...
@@ -80,6 +80,7 @@ public class Details_Of_Chat extends AppCompatActivity {
                                 msg_data.clear();
                                 for (DataSnapshot datasnapshot : snapshot.getChildren()) {
                                     Msg_data msgData1 = datasnapshot.getValue(Msg_data.class);
+                                    msgData1.setId_Msg(datasnapshot.getKey());
                                     msg_data.add(msgData1);
 
                                 }
@@ -95,6 +96,11 @@ public class Details_Of_Chat extends AppCompatActivity {
         detailsOfChatBinding.btnSent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (detailsOfChatBinding.chatMessage.getText().toString().isEmpty()){
+                    detailsOfChatBinding.chatMessage.setError("Cannot leave it blank!");
+                    return;
+                }
                 String msg = detailsOfChatBinding.chatMessage.getText().toString();
                 final Msg_data msg_data1 = new Msg_data(msg, id_Sender);
                 msg_data1.setTime_Stamp(new Date().getTime());

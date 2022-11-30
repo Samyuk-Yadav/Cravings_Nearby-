@@ -56,13 +56,15 @@ public class Screen_Chat extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.user_setting:
-                Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "User Profile", Toast.LENGTH_SHORT).show();
+                Intent intent_User_Settings = new Intent(Screen_Chat.this, Screen_Settings_user.class);
+                startActivity(intent_User_Settings);
                 break;
 
             case R.id.logout:
                 firebaseAuth.signOut();
-                Intent inte = new Intent(Screen_Chat.this, Restaurant_Login.class);
-                startActivity(inte);
+                Intent intent_logout = new Intent(Screen_Chat.this, Restaurant_Login.class);
+                startActivity(intent_logout);
                 break;
 
         }

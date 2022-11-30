@@ -4,6 +4,7 @@ public class Msg_data {
     //Variables
     String msg;
     Long time_Stamp;
+    String id_Msg;
     String uID;
 
     //Constructors
@@ -20,6 +21,8 @@ public class Msg_data {
     }
 
     //Getter and Setter Setup
+    public String getId_Msg() {return id_Msg;}
+    public void setId_Msg(String id_Msg) {this.id_Msg = id_Msg;}
     public String getMsg() {
         return msg;
     }
