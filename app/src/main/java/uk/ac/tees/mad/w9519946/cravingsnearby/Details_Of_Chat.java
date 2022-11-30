@@ -1,5 +1,6 @@
 package uk.ac.tees.mad.w9519946.cravingsnearby;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -9,7 +10,10 @@ import android.view.View;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -33,6 +37,7 @@ public class Details_Of_Chat extends AppCompatActivity {
         setContentView(detailsOfChatBinding.getRoot());
         getSupportActionBar().hide();
 
+        //Set Hooks and Connect Firebase..
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -52,17 +57,41 @@ public class Details_Of_Chat extends AppCompatActivity {
             }
         });
 
+        //Set Array List
         final ArrayList<Msg_data> msg_data = new ArrayList<>();
 
+        //Set adapter
         final Adapter_Chats adapter_chats = new Adapter_Chats(msg_data, this);
         detailsOfChatBinding.recyclerViewChat.setAdapter(adapter_chats);
 
+        //Linear Layout to put chat in line form...
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         detailsOfChatBinding.recyclerViewChat.setLayoutManager(linearLayoutManager);
 
         //Button Sent
         final String roomreceiver = id_Reciever + id_Sender;
         final String roomSender = id_Sender + id_Reciever;
+
+        firebaseDatabase.getReference().child("Application Chats").child(roomSender)
+                        .addValueEventListener(new ValueEventListener() {
+                            @Override
+                            //Adding of data to Recyclerview in Details of Chat screen...
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                msg_data.clear();
+                                for (DataSnapshot datasnapshot : snapshot.getChildren()) {
+                                    Msg_data msgData1 = datasnapshot.getValue(Msg_data.class);
+                                    msg_data.add(msgData1);
+
+                                }
+                                adapter_chats.notifyDataSetChanged();
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+
         detailsOfChatBinding.btnSent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

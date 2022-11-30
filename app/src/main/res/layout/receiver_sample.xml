@@ -36,6 +36,8 @@
         android:maxWidth="270dp"
         android:minWidth="50dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/timestamp_reciever"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="parent" />

@@ -11,6 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -48,6 +53,25 @@ public class Adapter_Users extends  RecyclerView.Adapter<Adapter_Users.vview_Hol
 
         //UserName
         hanger.name_User.setText(data.getUser_Name());
+
+        FirebaseDatabase.getInstance().getReference().child("Application Chats")
+                .child(FirebaseAuth.getInstance().getUid()+ data.getId_User())
+                        .orderByChild("time_Stamp").limitToLast(1)
+                        .addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                if (snapshot.hasChildren()){
+                                    for (DataSnapshot shot:snapshot.getChildren()){
+                                        hanger.last_msg.setText(shot.child("msg").getValue(String.class));
+
+                                    }
+                                }
+                            }
+                        });
 
         //User name and Image sent to next chat screen.
         hanger.itemView.setOnClickListener(new View.OnClickListener() {
