@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/light_creme"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Frag_Entertain">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_Entertain_View"
+        android:fitsSystemWindows="true"
+        android:padding="2.5dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_margin="1.9dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

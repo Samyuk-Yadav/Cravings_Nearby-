@@ -8,7 +8,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment.Calls;
 import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment.Chats;
+import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment.Frag_Homie;
 import uk.ac.tees.mad.w9519946.cravingsnearby.Fragment.News;
+import uk.ac.tees.mad.w9519946.cravingsnearby.Heading_News;
 
 public class Adapter_Fragments extends FragmentPagerAdapter {
 

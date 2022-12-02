@@ -11,6 +11,7 @@
     <color name="light_Yellow" >#FFFACE</color>
     <color name="Orange" >#FF9800</color>
     <color name="Red" >#FF1706</color>
+    <color name="DarkRed" >#FF1100</color>
 
 
 
@@ -22,6 +23,7 @@
     <color name="Dark_Blue">#0069BC</color>
     <color name="Grass_Green">#C1DF9E</color>
     <color name="Creme">#E6E0DF</color>
+    <color name="light_creme">#CEDFE1</color>
 
 
 </resources>
