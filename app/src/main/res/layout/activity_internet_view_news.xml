@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
-                android:text="Oh! Is It?"
+                android:text="Today's Updates"
                 android:textColor="@color/Red"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"

@@ -15,6 +15,13 @@
         android:theme="@style/Theme.CravingsNearby"
         tools:targetApi="31">
         <activity
+            android:name=".Heading_News"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Internet_View_News"
             android:exported="false">
             <meta-data
@@ -141,7 +148,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Heading_News"
+            android:name=".Restaurant_Main_DashBoard"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

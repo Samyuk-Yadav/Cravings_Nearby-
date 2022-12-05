@@ -12,18 +12,26 @@
     <color name="Orange" >#FF9800</color>
     <color name="Red" >#FF1706</color>
     <color name="DarkRed" >#FF1100</color>
+    <color name="Redd" >#FF4B3E</color>
 
 
 
     #FFFACE
 
-    <color name="Background" >#AFDDF6</color>
+    <color name="Background" >#B5EAFD</color>
     <color name="SplashBackground" >#2196F3</color>
     <color name="DarkBlueBackground" >#A7C6DF</color>
     <color name="Dark_Blue">#0069BC</color>
     <color name="Grass_Green">#C1DF9E</color>
     <color name="Creme">#E6E0DF</color>
+    <color name="Creme2">#F5E5FE</color>
+    <color name="Creme3">#E5F1FE</color>
+    <color name="title_color">#373b54</color>
+    <color name="Creme4">#F9E4E4</color>
+    <color name="Creme5">#FAF7E2</color>
     <color name="light_creme">#CEDFE1</color>
+    <color name="light_orange">#FABD64</color>
+    <color name="pink">#FF3076</color>
 
 
 </resources>
