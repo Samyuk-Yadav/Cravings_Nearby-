@@ -1,6 +1,8 @@
 package uk.ac.tees.mad.w9519946.cravingsnearby.Model_Classes;
 
-public class Restaurant_Food_data {
+import java.io.Serializable;
+
+public class Restaurant_Food_data implements Serializable{
 
     private String food_description;
     private String food_pic;

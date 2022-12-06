@@ -1,5 +1,8 @@
 package uk.ac.tees.mad.w9519946.cravingsnearby.Adapter_Classes;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
+import uk.ac.tees.mad.w9519946.cravingsnearby.Details_of_Food;
 import uk.ac.tees.mad.w9519946.cravingsnearby.Model_Classes.Restaurant_Food_data;
 import uk.ac.tees.mad.w9519946.cravingsnearby.R;
 
@@ -33,12 +38,22 @@ public class Adapter_Foods_List extends RecyclerView.Adapter<Adapter_Foods_List.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Holder_View holder, int position1) {
-        holder.popular_title.setText(restaurantFoodData.get(position1).getFood_title());
-        holder.popular_fees.setText(String.valueOf(restaurantFoodData.get(position1).getFood_fees()));
+    public void onBindViewHolder(@NonNull Holder_View hanger, @SuppressLint("RecyclerView") int position1) {
+        hanger.popular_title.setText(restaurantFoodData.get(position1).getFood_title());
+        hanger.popular_fees.setText(String.valueOf(restaurantFoodData.get(position1).getFood_fees()));
 
-        int resource_Id_Drawable = holder.itemView.getContext().getResources().getIdentifier(restaurantFoodData.get(position1).getFood_pic(), "drawable", holder.itemView.getContext().getPackageName());
-        Glide.with(holder.itemView.getContext()).load(resource_Id_Drawable).into(holder.picture_Foods_list);
+        int resource_Id_Drawable = hanger.itemView.getContext().getResources().getIdentifier(restaurantFoodData.get(position1).getFood_pic(), "drawable", hanger.itemView.getContext().getPackageName());
+        Glide.with(hanger.itemView.getContext()).load(resource_Id_Drawable).into(hanger.picture_Foods_list);
+
+        hanger.popular_add_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent inte = new Intent(hanger.itemView.getContext(), Details_of_Food.class);
+                inte.putExtra("restaurantFoodData", restaurantFoodData.get(position1));
+                hanger.picture_Foods_list.getContext().startActivity(inte);
+                //hanger.itemView.getContext().startActivity(inte);
+            }
+        });
     }
 
     @Override

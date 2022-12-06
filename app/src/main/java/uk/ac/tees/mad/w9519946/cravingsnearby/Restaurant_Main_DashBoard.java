@@ -58,11 +58,10 @@ public class Restaurant_Main_DashBoard extends AppCompatActivity {
         food_List_RecyclerView.setLayoutManager(fl_layoutManager);
         ArrayList<Restaurant_Food_data> restaurant_food_data = new ArrayList<>();
         restaurant_food_data.add(new Restaurant_Food_data("Tikka Chicken, Olives, Fresh Oregano, Old Vintage Spices", "chicken_pizza_pic", 10.5, "Chicken Tikka Pizza"));
-        restaurant_food_data.add(new Restaurant_Food_data("Ham or Beef, Lettuce, Onions, Spinach", "hot_dog_pic", 8.5, "Hot Dog"));
         restaurant_food_data.add(new Restaurant_Food_data("Extra Cheese, Beef or Ham, Tomato, Lettuce, Onions, Special Sauce","burger_pic",9.50,"Ham Burger"));
         restaurant_food_data.add(new Restaurant_Food_data("Olives, kalamata(Pitted), Oils(Vegitable,Olive), Fresh Oregano, Cherry Tomato, Basil", "veg_pizza_pic", 6.75, "Vegitable Pizza"));
         restaurant_food_data.add(new Restaurant_Food_data("Mozzerella Cheese, Slices Pepperoni, Ground Black Pepper, Fresh Oregano, Old Vintage Spices", "pizza_pic", 10.25, "Pepperoni Spicy Pizza"));
-
+        restaurant_food_data.add(new Restaurant_Food_data("Ham or Beef, Lettuce, Onions, Spinach", "hot_dog_pic", 8.5, "Hot Dog"));
         recycle_adapter2 = new Adapter_Foods_List(restaurant_food_data);
         food_List_RecyclerView.setAdapter(recycle_adapter2);
 
