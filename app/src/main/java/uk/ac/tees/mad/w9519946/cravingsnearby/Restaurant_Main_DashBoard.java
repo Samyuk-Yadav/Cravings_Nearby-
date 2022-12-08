@@ -4,7 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -29,6 +35,29 @@ public class Restaurant_Main_DashBoard extends AppCompatActivity {
 
         categories_List_Recycler_View();
         foods_List_Recycler_View();
+        navigating_to_bottom1();
+
+
+    }
+
+    private void navigating_to_bottom1(){
+
+        FloatingActionButton acting_floating_btn = findViewById(R.id.floating_Action_Buttonx);
+        LinearLayout btn_Home = findViewById(R.id.btn_Homex);
+
+        btn_Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Restaurant_Main_DashBoard.this, Restaurant_Main_DashBoard.class));
+            }
+        });
+
+        acting_floating_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Restaurant_Main_DashBoard.this, Restaurant_Payment_Screen.class));
+            }
+        });
 
 
     }

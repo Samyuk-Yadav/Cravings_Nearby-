@@ -6,6 +6,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import uk.ac.tees.mad.w9519946.cravingsnearby.Model_Classes.Restaurant_Food_data;
+import uk.ac.tees.mad.w9519946.cravingsnearby.News_Utilities.Cart_Number_Of_Items;
 
 public class Cart_Shopping {
     private Context content;
@@ -34,6 +35,32 @@ public class Cart_Shopping {
             foodData_List.add(food_data);
         }helper_class.putListObject("Shopping_List_Cart", foodData_List);
         Toast.makeText(content, "Food Added to Cart", Toast.LENGTH_SHORT).show();
+    }
+
+    public Double getcompleteCost(){
+        ArrayList<Restaurant_Food_data> restaurantFoodData55 = cart_Shopping_List();
+        double cost = 0;
+        for (int g = 0; g< restaurantFoodData55.size(); g++){
+            cost = cost + (restaurantFoodData55.get(g).getFood_fees()*restaurantFoodData55.get(g).getCurrency_in_Cart());
+        }
+        return cost;
+    }
+
+    public void food_minus_btn(ArrayList<Restaurant_Food_data> restaurantFoodData696, int position696, Cart_Number_Of_Items cart_number_of_items69){
+        if (restaurantFoodData696.get(position696).getCurrency_in_Cart()==1){
+            restaurantFoodData696.remove(position696);
+        }
+        else{
+            restaurantFoodData696.get(position696).setCurrency_in_Cart(restaurantFoodData696.get(position696).getCurrency_in_Cart()-1);
+        }
+        helper_class.putListObject("Shopping_List_Cart", restaurantFoodData696);
+        cart_number_of_items69.swaping();
+    }
+
+    public void food_number_plus(ArrayList<Restaurant_Food_data> restaurantFoodData69, int position69, Cart_Number_Of_Items cart_number_of_items){
+        restaurantFoodData69.get(position69).setCurrency_in_Cart(restaurantFoodData69.get(position69).getCurrency_in_Cart()+1);
+        helper_class.putListObject("Shopping_List_Cart", restaurantFoodData69);
+        cart_number_of_items.swaping();
     }
 
     public ArrayList<Restaurant_Food_data> cart_Shopping_List(){

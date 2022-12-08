@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginStart="17dp"
+    android:layout_marginEnd="17dp"
+    android:elevation="2dp"
+    android:padding="1dp"
+    android:layout_marginTop="11dp"
+    android:layout_marginBottom="11dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/food_item_Pic"
+        android:layout_width="71dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/veg_pizza_pic" />
+
+    <TextView
+        android:id="@+id/txtView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:text="food_title_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/pound_currency_symbol"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/food_item_Pic"
+        app:layout_constraintTop_toTopOf="@+id/food_item_Pic" />
+
+    <ImageView
+        android:id="@+id/food_Item_Minus"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/food_item_Pic"
+        app:layout_constraintStart_toStartOf="@+id/txtView_title"
+        app:srcCompat="@drawable/btn_minuss" />
+
+    <TextView
+        android:id="@+id/food_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/food_Item_Minus"
+        app:layout_constraintStart_toEndOf="@+id/food_Item_Minus"
+        app:layout_constraintTop_toTopOf="@+id/food_Item_Minus" />
+
+    <ImageView
+        android:id="@+id/food_Item_Plus"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/food_item_number"
+        app:layout_constraintStart_toEndOf="@+id/food_item_number"
+        app:layout_constraintTop_toTopOf="@+id/food_item_number"
+        app:layout_constraintVertical_bias="0.476"
+        app:srcCompat="@drawable/btn_pluss" />
+
+    <TextView
+        android:id="@+id/individual_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/txtView_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtView_title" />
+
+    <TextView
+        android:id="@+id/pound_currency_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:textSize="15sp"
+        android:text="£"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/individual_cost"
+        app:layout_constraintEnd_toStartOf="@+id/individual_cost"
+        app:layout_constraintTop_toTopOf="@+id/individual_cost" />
+
+    <TextView
+        android:id="@+id/group_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/food_Item_Plus"
+        app:layout_constraintEnd_toEndOf="@+id/individual_cost"
+        app:layout_constraintTop_toTopOf="@+id/food_Item_Plus" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="£"
+        android:layout_marginEnd="5dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/group_cost"
+        app:layout_constraintEnd_toStartOf="@+id/group_cost"
+        app:layout_constraintTop_toTopOf="@+id/group_cost" />
+</androidx.constraintlayout.widget.ConstraintLayout>

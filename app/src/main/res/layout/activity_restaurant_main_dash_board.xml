@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     android:background="@color/Background"
     tools:context=".Restaurant_Main_DashBoard">
 
@@ -303,7 +305,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/btn_Home"
+                    android:id="@+id/btn_Homex"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -437,7 +439,7 @@
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floating_Action_Button"
+            android:id="@+id/floating_Action_Buttonx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/pink"
