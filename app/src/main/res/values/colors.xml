@@ -20,6 +20,7 @@
 
     <color name="Background" >#B5EAFD</color>
     <color name="SplashBackground" >#2196F3</color>
+    <color name="BMI_Background" >#50ABF3</color>
     <color name="DarkBlueBackground" >#A7C6DF</color>
     <color name="Dark_Blue">#0069BC</color>
     <color name="Grass_Green">#C1DF9E</color>

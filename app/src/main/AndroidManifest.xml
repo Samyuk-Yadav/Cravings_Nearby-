@@ -15,6 +15,20 @@
         android:theme="@style/Theme.CravingsNearby"
         tools:targetApi="31">
         <activity
+            android:name=".Screen_Final_BMI_Calculator"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Restaurant_Main_DashBoard"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Restaurant_Payment_Screen"
             android:exported="false">
             <meta-data
@@ -162,7 +176,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Restaurant_Main_DashBoard"
+            android:name=".Screen_BMI_Calculator"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

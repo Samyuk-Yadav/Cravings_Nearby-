@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/Background"
+    android:layout_height="match_parent"
+    tools:context=".Screen_Final_BMI_Calculator">
+
+    <RelativeLayout
+        android:id="@+id/layout_line"
+        android:layout_width="385dp"
+        android:layout_height="297dp"
+        android:layout_below="@+id/animated_image"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/focusing_gender_background"
+        android:padding="21dp">
+
+        <TextView
+            android:id="@+id/textView_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="28dp"
+            android:text="Gender"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display_BMI_Value"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="BMI Sign"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="36dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/display_BMI_Value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_gender"
+            android:layout_centerHorizontal="true"
+            android:text="44"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="51sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animated_image"
+        android:layout_width="match_parent"
+        android:layout_height="201dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/warn" />
+
+
+    <android.widget.Button
+        android:id="@+id/bmi_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/button_layout_orange"
+        android:text="Recalculate your BMI"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
