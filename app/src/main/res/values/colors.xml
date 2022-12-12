@@ -5,7 +5,7 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#252525</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFEB3B</color>
     <color name="light_Yellow" >#FFFACE</color>
@@ -16,6 +16,7 @@
 
 
 
+    #FF000000
     #FFFACE
 
     <color name="Background" >#B5EAFD</color>
@@ -33,6 +34,8 @@
     <color name="Creme5">#FAF7E2</color>
     <color name="light_creme">#CEDFE1</color>
     <color name="light_orange">#FABD64</color>
+    <color name="focus_light_orange">#FABD64</color>
+    <color name="not_focus_light_orange">#F1BF77</color>
     <color name="description">#F8521E</color>
     <color name="pink">#FF3076</color>
 

@@ -117,7 +117,7 @@
         android:layout_marginRight="21dp"
         android:layout_marginBottom="52dp"
         android:layout_toEndOf="@id/vertical_Line_Center"
-        android:background="@drawable/not_focusing_gender_background">
+        android:background="@drawable/focusing_gender_background">
 
         <TextView
             android:id="@+id/weight_Number_txt"
@@ -280,7 +280,7 @@
         android:layout_marginRight="21dp"
         android:layout_marginBottom="52dp"
         android:layout_toStartOf="@id/vertical_Line_Center"
-        android:background="@drawable/not_focusing_gender_background">
+        android:background="@drawable/focusing_gender_background">
 
         <TextView
             android:id="@+id/age_Number_txt"
