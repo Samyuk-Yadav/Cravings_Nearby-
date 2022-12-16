@@ -13,6 +13,7 @@
     <color name="Red" >#FF1706</color>
     <color name="DarkRed" >#FF1100</color>
     <color name="Redd" >#FF4B3E</color>
+    <color name="action_bar_title_color" >#000000</color>
 
 
 
@@ -38,6 +39,7 @@
     <color name="not_focus_light_orange">#F1BF77</color>
     <color name="description">#F8521E</color>
     <color name="pink">#FF3076</color>
+    <color name="yellow_light">#ECC008</color>
 
 
 </resources>

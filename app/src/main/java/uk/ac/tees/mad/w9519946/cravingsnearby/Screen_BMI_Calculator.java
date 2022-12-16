@@ -30,6 +30,7 @@ public class Screen_BMI_Calculator extends AppCompatActivity {
     TextView age_Number_txt;
     ImageView weight_plus1;
     SeekBar length_of_seekbar;
+    ImageView back;
     TextView weight_Number_txt;
     ImageView age1_minus;
     ImageView weight_minus1;
@@ -51,6 +52,7 @@ public class Screen_BMI_Calculator extends AppCompatActivity {
         weight_minus1 = findViewById(R.id.weight_minus);
         age1_plus = findViewById(R.id.age1_plus);
         length_of_seekbar.setProgress(169);
+        back = findViewById(R.id.backing_BMI);
         weight_plus1 = findViewById(R.id.weight_plus);
         length_of_seekbar.setMax(280);
         height_present_now = findViewById(R.id.height_present_now);
@@ -158,6 +160,13 @@ public class Screen_BMI_Calculator extends AppCompatActivity {
                 current_user_age = String.valueOf(current_age_default);
                 age_Number_txt.setText(current_user_age);
 
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Screen_BMI_Calculator.this, Restaurant_Home_DashBoard.class));
             }
         });
 

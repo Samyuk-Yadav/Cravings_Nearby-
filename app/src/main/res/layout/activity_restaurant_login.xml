@@ -17,7 +17,7 @@
         android:padding="4dp">
 
         <ImageView
-            android:id="@+id/back_btn1"
+            android:id="@+id/back_btn1Rl"
             android:layout_width="54dp"
             android:layout_height="48dp"
             android:layout_gravity="left"
@@ -179,7 +179,7 @@
         android:background="@drawable/button_layout"
         android:padding="8dp"
         android:text="LOGIN"
-        android:backgroundTint="@color/yellow"
+        android:backgroundTint="@color/Orange"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:cornerRadius="14dp" />

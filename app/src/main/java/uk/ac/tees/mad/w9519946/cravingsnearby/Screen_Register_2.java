@@ -38,6 +38,13 @@ public class Screen_Register_2 extends AppCompatActivity {
         Next = findViewById(R.id.button_Next);
         Login = findViewById(R.id.button_Login);
 
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Screen_Register_2.this, Screen_Login.class));
+            }
+        });
+
         Back_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

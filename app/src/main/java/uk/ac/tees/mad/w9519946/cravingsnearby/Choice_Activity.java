@@ -2,6 +2,7 @@ package uk.ac.tees.mad.w9519946.cravingsnearby;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,10 +14,13 @@ import android.widget.Button;
 public class Choice_Activity extends AppCompatActivity {
 
     //Variables
-    Button Register;
-    Button Login;
+    Button Customer_Register;
+    Button Customer_Login;
+    Button login_Btnc_Restaurant1;
+    Button register_Btnc_restaurant1;
     Button How_We_work_Button;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +29,14 @@ public class Choice_Activity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         //Hooks
-        Register = findViewById(R.id.register_Btnc);
-        Login = findViewById(R.id.login_Btnc);
+        Customer_Register = findViewById(R.id.register_Btnc);
+        Customer_Login = findViewById(R.id.login_Btnc);
+        login_Btnc_Restaurant1 = findViewById(R.id.login_Btnc_Restaurant);
+        register_Btnc_restaurant1 = findViewById(R.id.register_Btnc_restaurant);
         How_We_work_Button = findViewById(R.id.how_we_work_btnc);
 
-        //Login Activity
-        Login.setOnClickListener(new View.OnClickListener() {
+        //Customer Login Activity
+        Customer_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Choice_Activity.this, Screen_Login.class);
@@ -38,8 +44,8 @@ public class Choice_Activity extends AppCompatActivity {
             }
         });
 
-        //Register Activity
-        Register.setOnClickListener(new View.OnClickListener() {
+        //Customer Register Activity
+        Customer_Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Choice_Activity.this, Screen_Register_1.class);
@@ -47,7 +53,21 @@ public class Choice_Activity extends AppCompatActivity {
             }
         });
 
+        //Restaurant Login
+        login_Btnc_Restaurant1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Choice_Activity.this, Restaurant_Login.class));
+            }
+        });
 
+        //Restaurant Register
+        register_Btnc_restaurant1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Choice_Activity.this, Restaurant_Register.class));
+            }
+        });
 
     }
 

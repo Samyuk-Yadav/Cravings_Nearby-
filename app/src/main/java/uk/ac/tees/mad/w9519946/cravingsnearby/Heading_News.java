@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.Toolbar;
 
@@ -20,6 +24,7 @@ public class Heading_News extends AppCompatActivity {
     TabItem health;
     String sAPI_KEY_API = "dbf9455965134409a734d7d7721efdd2";
     PagerAdapter adapter_pager;
+    ImageView back_btnn;
     TabItem technology;
     ViewPager pager1_view;
     TabItem sports;
@@ -28,6 +33,7 @@ public class Heading_News extends AppCompatActivity {
     TabItem homeie;
     TabLayout t_tab_layout;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +42,7 @@ public class Heading_News extends AppCompatActivity {
         setContentView(R.layout.activity_heading_news);
         getSupportActionBar().hide();
         //Hooks
+        back_btnn = findViewById(R.id.back_re);
         t_tab_layout = findViewById(R.id.tab_2);
         pager1_view = findViewById(R.id.fragment_container);
         homeie = findViewById(R.id.id_home);
@@ -67,10 +74,18 @@ public class Heading_News extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {}
         });
 
+
+
         pager1_view.addOnPageChangeListener(new
                 TabLayout.TabLayoutOnPageChangeListener(t_tab_layout));
 
 
+        back_btnn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Heading_News.this, Restaurant_Home_DashBoard.class));
+            }
+        });
 
 
     }

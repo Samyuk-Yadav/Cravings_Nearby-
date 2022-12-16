@@ -38,6 +38,21 @@ public class Screen_Register_1 extends AppCompatActivity {
         Google_button = findViewById(R.id.button_1Google_Register);
         Next_button = findViewById(R.id.button_Next1);
 
+        Already_have_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Screen_Register_1.this, Screen_Login.class));
+            }
+        });
+
+        Back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Screen_Register_1.this, Choice_Activity.class));
+            }
+        });
+
+
 
     }
 

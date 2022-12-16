@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -17,7 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 public class Screen_Login extends AppCompatActivity {
 
     //Variables
-    Button Back_btn;
+    ImageView Back_btn;
     Button Login;
     Button Google;
     Button Facebook;
@@ -47,6 +48,19 @@ public class Screen_Login extends AppCompatActivity {
         Password = findViewById(R.id.password_login);
 
         //OnClick Listener
+        No_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Screen_Login.this, Screen_Register_1.class));
+            }
+        });
+
+        Forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Screen_Login.this, Screen_Reset_1.class));
+            }
+        });
 
         Back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +70,7 @@ public class Screen_Login extends AppCompatActivity {
             }
         });
 
+        //Change Destination
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

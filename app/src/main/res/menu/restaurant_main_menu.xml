@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:titleCondensed="Title"
+        android:id="@+id/user_search"
+        android:title="Search"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:icon="@drawable/restaurant_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        />
+
+    <item
+        android:titleCondensed="Notify"
+        android:id="@+id/user_notify"
+        android:title="Notify"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:icon="@drawable/notify"
+
+        />
+
+    <item
+        android:id="@+id/user_setting"
+        android:title="Settings"/>
+
+    <item
+        android:id="@+id/watch_News"
+        android:title="Watch News"/>
+
+    <item
+        android:id="@+id/calculate_BMI"
+        android:title="BMI Calculator"/>
+
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"/>
+
+
+
+</menu>

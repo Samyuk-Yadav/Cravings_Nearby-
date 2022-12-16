@@ -156,6 +156,7 @@
         android:padding="15dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:backgroundTint="@color/yellow"
         android:text="Login"
         app:cornerRadius="15dp" />
 

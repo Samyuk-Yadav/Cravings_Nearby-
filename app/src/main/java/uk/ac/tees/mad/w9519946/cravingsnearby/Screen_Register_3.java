@@ -36,6 +36,21 @@ public class Screen_Register_3 extends AppCompatActivity {
         Login = findViewById(R.id.button_Register3);
 
 
+        Back_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Screen_Register_3.this, Screen_Register_2.class));
+            }
+        });
+
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Screen_Register_3.this, Screen_Login.class));
+            }
+        });
+
+
 
     }
 
@@ -73,7 +88,7 @@ public class Screen_Register_3 extends AppCompatActivity {
     }
 
     private boolean number_Phone_Validation() {
-        String numberCheck = "^[0-9]{9,11}$";
+        String numberCheck = "^[0-9]{10}$";
         String details = Number_Phone.getEditText().getText().toString().trim();
 
         if (details.isEmpty()) {

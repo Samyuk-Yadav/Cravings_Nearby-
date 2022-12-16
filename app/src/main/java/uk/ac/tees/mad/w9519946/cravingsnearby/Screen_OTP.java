@@ -69,6 +69,15 @@ public class Screen_OTP extends AppCompatActivity {
         number_phone = getIntent().getStringExtra("register_phoneNo");
         ProgressBar.setVisibility(View.VISIBLE);
 
+        Close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Show a message and update the UI
+                Toast.makeText(Screen_OTP.this, "Verify all your Details or If already a customer than Login Directly", Toast.LENGTH_SHORT).show();
+               startActivity(new Intent(Screen_OTP.this, Screen_Register_1.class));
+            }
+        });
+
         mCall = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
             @Override
@@ -102,7 +111,7 @@ public class Screen_OTP extends AppCompatActivity {
             }
         };
 
-        otp_sent_to_user(number_phone);
+ //       otp_sent_to_user(number_phone);
 
 
        /* Next.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +121,7 @@ public class Screen_OTP extends AppCompatActivity {
                 if (TextUtils.isEmpty(number_phone)) {
                     Toast.makeText(Screen_OTP.this, "Enter Valid OTP...", Toast.LENGTH_SHORT).show();
                 } else {
+
                     codeVerify(OTP_Pin.getText().toString());
                 }
             }
@@ -120,7 +130,7 @@ public class Screen_OTP extends AppCompatActivity {
 
     }
 
-    private void otp_sent_to_user(String register_phoneNo) {
+  /*  private void otp_sent_to_user(String register_phoneNo) {
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(rauth)
                         .setPhoneNumber(register_phoneNo)       // Phone number to verify
@@ -131,7 +141,7 @@ public class Screen_OTP extends AppCompatActivity {
         PhoneAuthProvider.verifyPhoneNumber(options);
 
 
-    }
+    }*/
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCall;
 

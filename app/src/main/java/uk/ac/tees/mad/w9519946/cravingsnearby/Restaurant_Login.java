@@ -10,12 +10,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.airbnb.lottie.L;
-import com.google.android.gms.auth.api.identity.BeginSignInRequest;
-import com.google.android.gms.auth.api.identity.SignInClient;
-import com.google.android.gms.auth.api.identity.SignInCredential;
+
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -40,6 +38,7 @@ public class Restaurant_Login extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     GoogleSignInClient userLogin;
     ProgressDialog dialog;
+    ImageView back_arrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +63,22 @@ public class Restaurant_Login extends AppCompatActivity {
                 .requestEmail()
                 .build();
         userLogin = GoogleSignIn.getClient(this, options);
+
+        //Forgot password
+        loginBinding.forgetPasswordl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Restaurant_Login.this, Screen_Reset_1.class));
+            }
+        });
+
+        //Back
+        loginBinding.backBtn1Rl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Restaurant_Login.this, Choice_Activity.class));
+            }
+        });
 
 
         //Google Authentication
@@ -120,6 +135,14 @@ public class Restaurant_Login extends AppCompatActivity {
             public void onClick(View view) {
                 Intent inte = new Intent(Restaurant_Login.this, Restaurant_Register.class);
                 startActivity(inte);
+            }
+        });
+
+        //Switch to Customer format
+        loginBinding.customerLoginHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Restaurant_Login.this, Screen_Login.class));
             }
         });
 
