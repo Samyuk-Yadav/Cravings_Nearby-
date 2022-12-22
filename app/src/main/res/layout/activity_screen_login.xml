@@ -183,6 +183,7 @@
             android:layout_marginRight="5dp"
             android:backgroundTint="@color/white"
             android:padding="15dp"
+            android:drawableLeft="@drawable/google1"
             android:text="Google"
             android:textColor="@color/black"
             app:cornerRadius="5dp" />
@@ -193,6 +194,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:backgroundTint="#2196F3"
+            android:drawableLeft="@drawable/facebook"
             android:padding="15dp"
             android:text="Facebook"
             android:textColor="@color/white"

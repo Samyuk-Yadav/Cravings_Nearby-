@@ -85,7 +85,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Screen_Register_1"
+            android:name=".Restaurant_Home_DashBoard"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -183,7 +183,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Restaurant_Home_DashBoard"
+            android:name=".Screen_Register_1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

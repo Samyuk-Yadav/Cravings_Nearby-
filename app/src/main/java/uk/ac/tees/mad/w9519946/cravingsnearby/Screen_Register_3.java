@@ -11,7 +11,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.hbb20.CountryCodePicker;
+
+import uk.ac.tees.mad.w9519946.cravingsnearby.Model_Classes.Customers_data;
 
 public class Screen_Register_3 extends AppCompatActivity {
 
@@ -34,6 +39,7 @@ public class Screen_Register_3 extends AppCompatActivity {
         Number_Phone = findViewById(R.id.number_register);
         Next = findViewById(R.id.button_Next_Register);
         Login = findViewById(R.id.button_Register3);
+
 
 
         Back_Button.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +79,7 @@ public class Screen_Register_3 extends AppCompatActivity {
 //        Log.v("ScreenReg3", Picker_Code.getDefaultCountryCodeWithPlus());
         String phone_r = s + userGivenNumber;
 //        String phone_r = "+" + Picker_Code.getDefaultCountryCode() + userGivenNumber;
+
 
 
         Intent i = new Intent(Screen_Register_3.this, Screen_OTP.class);

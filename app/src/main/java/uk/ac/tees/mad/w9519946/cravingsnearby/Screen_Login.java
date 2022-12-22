@@ -1,8 +1,10 @@
 package uk.ac.tees.mad.w9519946.cravingsnearby;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.media.FaceDetector;
 import android.os.Bundle;
@@ -12,8 +14,14 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Screen_Login extends AppCompatActivity {
 
@@ -22,6 +30,8 @@ public class Screen_Login extends AppCompatActivity {
     Button Login;
     Button Google;
     Button Facebook;
+    FirebaseAuth firebaseAuth1231;
+    ProgressDialog djdialog;
     TextView Forgot_password;
     TextView No_account;
     CheckBox Remember_me;
@@ -36,6 +46,10 @@ public class Screen_Login extends AppCompatActivity {
         setContentView(R.layout.activity_screen_login);
         getSupportActionBar().hide();
 
+        djdialog = new ProgressDialog(Screen_Login.this);
+        djdialog.setTitle("Welcome Back");
+        djdialog.setMessage("Account Login Here!");
+
         //Hooks
         Back_btn = findViewById(R.id.back_btnl);
         Login = findViewById(R.id.button_Login);
@@ -46,6 +60,8 @@ public class Screen_Login extends AppCompatActivity {
         Remember_me = findViewById(R.id.remember_me);
         Email = findViewById(R.id.email_login);
         Password = findViewById(R.id.password_login);
+        firebaseAuth1231 = FirebaseAuth.getInstance();
+
 
         //OnClick Listener
         No_account.setOnClickListener(new View.OnClickListener() {
@@ -74,16 +90,28 @@ public class Screen_Login extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Screen_Login.this, MainActivity.class);
-                startActivity(i);
+                djdialog.show();
+                firebaseAuth1231.signInWithEmailAndPassword(Email.getEditText().getText().toString(), Password.getEditText().getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> focus) {
+                        djdialog.dismiss();
+                        if (focus.isSuccessful()){
+                            Intent i = new Intent(Screen_Login.this, Restaurant_Home_DashBoard.class);
+                            startActivity(i);
+                        }
+                        else {
+                            Toast.makeText(Screen_Login.this, focus.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
             }
         });
 
-
-
-
-
-
-
+        if (firebaseAuth1231.getCurrentUser()!=null)
+        {
+            Intent inteeee = new Intent(Screen_Login.this, Restaurant_Home_DashBoard.class);
+            startActivity(inteeee);
+        }
     }
 }

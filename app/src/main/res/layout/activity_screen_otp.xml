@@ -100,11 +100,9 @@
 
 
         <Button
-            android:id="@+id/button_NextOTP"
-            android:onClick="_OTPVerify"
+            android:id="@+id/button_NextOTP1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:enabled="false"
             android:layout_margin="10dp"
             android:layout_marginTop="23dp"
             android:layout_marginBottom="7dp"

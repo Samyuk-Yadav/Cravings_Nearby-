@@ -68,7 +68,7 @@ public class Restaurant_Home_DashBoard extends AppCompatActivity {
 
             case R.id.logout:
                 firebaseAuth12.signOut();
-                Intent intent_logout = new Intent(Restaurant_Home_DashBoard.this, Restaurant_Login.class);
+                Intent intent_logout = new Intent(Restaurant_Home_DashBoard.this, Screen_Login.class);
                 startActivity(intent_logout);
                 break;
 
