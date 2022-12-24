@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/back_forgot"
         android:layout_width="64dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/back_arrow1"
@@ -128,7 +128,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="13dp"
         android:background="@drawable/button_layout"
         android:padding="15dp"
         android:text="Reset PassWord"

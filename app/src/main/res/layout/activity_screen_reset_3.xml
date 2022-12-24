@@ -14,10 +14,11 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/back3_reset"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="6dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="12dp"
             android:layout_marginLeft="6dp"
             android:src="@drawable/back_arrow1"/>
 
@@ -26,7 +27,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="4dp">
+            android:layout_marginTop="50dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -62,6 +63,7 @@
             android:textSize="25sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -89,6 +91,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_password_repeat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

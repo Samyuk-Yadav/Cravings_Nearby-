@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.Menu;
@@ -30,8 +31,10 @@ public class Screen_Chat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         screenChatBinding = ActivityScreenChatBinding.inflate(getLayoutInflater());
         setContentView(screenChatBinding.getRoot());
+
       //  getSupportActionBar().setTitle("                 Customer Chats");
         getSupportActionBar().setTitle(getString(R.string.customer_chat));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Background_Top)));
 
         //Hooks
         firebaseAuth = FirebaseAuth.getInstance();
@@ -55,13 +58,31 @@ public class Screen_Chat extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId())
         {
-            case R.id.user_setting:
+            case R.id.user_restaurant_dashboard_chat:
+                Toast.makeText(this, "Order Delicious Food Here!", Toast.LENGTH_SHORT).show();
+                Intent intent_User_Restaurant = new Intent(Screen_Chat.this, Restaurant_Main_DashBoard.class);
+                startActivity(intent_User_Restaurant);
+                break;
+
+            case R.id.watch_News_chat:
+                Toast.makeText(this, "User Profile", Toast.LENGTH_SHORT).show();
+                Intent intent_User_news = new Intent(Screen_Chat.this, Heading_News.class);
+                startActivity(intent_User_news);
+                break;
+
+            case R.id.calculate_BMI_chat:
+                Toast.makeText(this, "User Profile", Toast.LENGTH_SHORT).show();
+                Intent intent_User_BMI = new Intent(Screen_Chat.this, Screen_BMI_Calculator.class);
+                startActivity(intent_User_BMI);
+                break;
+
+            case R.id.user_setting_chat:
                 Toast.makeText(this, "User Profile", Toast.LENGTH_SHORT).show();
                 Intent intent_User_Settings = new Intent(Screen_Chat.this, Screen_Settings_user.class);
                 startActivity(intent_User_Settings);
                 break;
 
-            case R.id.logout:
+            case R.id.logout_chat:
                 firebaseAuth.signOut();
                 Intent intent_logout = new Intent(Screen_Chat.this, Restaurant_Login.class);
                 startActivity(intent_logout);

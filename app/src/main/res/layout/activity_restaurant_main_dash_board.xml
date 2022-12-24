@@ -30,7 +30,7 @@
 
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/arrow_to_home"
                     android:layout_width="40dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="4dp"
@@ -58,7 +58,7 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/textView13"
                     app:layout_constraintEnd_toStartOf="@+id/user_name_Restaurant"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toEndOf="@+id/arrow_to_home"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -97,7 +97,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/hi" />
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageView_restaurant"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="1dp"

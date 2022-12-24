@@ -9,8 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -18,6 +22,7 @@ import uk.ac.tees.mad.w9519946.cravingsnearby.Adapter_Classes.Adapter_Categories
 import uk.ac.tees.mad.w9519946.cravingsnearby.Adapter_Classes.Adapter_Foods_List;
 import uk.ac.tees.mad.w9519946.cravingsnearby.Model_Classes.Restaurant_Food_data;
 import uk.ac.tees.mad.w9519946.cravingsnearby.Model_Classes.Restaurant_List_data;
+import uk.ac.tees.mad.w9519946.cravingsnearby.databinding.ActivityRestaurantMainDashBoardBinding;
 
 public class Restaurant_Main_DashBoard extends AppCompatActivity {
 
@@ -26,16 +31,48 @@ public class Restaurant_Main_DashBoard extends AppCompatActivity {
     private RecyclerView.Adapter recycle_adapter;
     private RecyclerView.Adapter recycle_adapter2;
 
-
+    ActivityRestaurantMainDashBoardBinding activityRestaurantMainDashBoardBinding;
+    
+    ImageView photo;
+    TextView user_name;
+    ImageView back_arrow_btn;
+    FirebaseDatabase firebaseDatabase;
+    FirebaseAuth firebaseAuth;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restaurant_main_dash_board);
+        activityRestaurantMainDashBoardBinding = ActivityRestaurantMainDashBoardBinding.inflate(getLayoutInflater());
+        setContentView(activityRestaurantMainDashBoardBinding.getRoot());
         getSupportActionBar().hide();
+
+        //Set Hooks and Connect Firebase..
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        photo = findViewById(R.id.imageView_restaurant);
+        user_name = findViewById(R.id.user_name_Restaurant);
+        back_arrow_btn = findViewById(R.id.arrow_to_home);
+
+        String user_Nameeee = getIntent().getStringExtra("user_Name");
+        String pic_Profileeee = getIntent().getStringExtra("pic_Profile");
+
+        user_name.setText(user_Nameeee);
+        Picasso.get().load(pic_Profileeee).placeholder(R.drawable.user_image).into(photo);
+
+       // detailsOfChatBinding.usernameChat.setText(user_Name);
+       // Picasso.get().load(pic_Profile).placeholder(R.drawable.user_image).into(detailsOfChatBinding.profileImage);
 
         categories_List_Recycler_View();
         foods_List_Recycler_View();
         navigating_to_bottom1();
+
+        back_arrow_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent o = new Intent(Restaurant_Main_DashBoard.this, Restaurant_Home_DashBoard.class);
+                startActivity(o);
+            }
+        });
 
 
     }

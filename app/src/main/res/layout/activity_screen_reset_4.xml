@@ -9,20 +9,12 @@
     android:orientation="vertical"
     tools:context=".Screen_Reset_4">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:padding="6dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginBottom="35dp"
-        android:src="@drawable/back_arrow1"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:layout_margin="6dp"
+        android:layout_marginTop="100dp"
         android:layout_gravity="center"
         android:fontFamily="@font/hind_medium"
         android:text="Password \nUpdate!"
@@ -44,15 +36,15 @@
         app:lottie_rawRes="@raw/password_updated" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="22dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:textStyle="bold"
         android:fontFamily="@font/hind_medium"
-        android:text="Successfully Updated the Password 🔒"
+        android:text="🔒 Successfully Updated the Password 🔒"
         android:textSize="21sp" />
 
     <Button

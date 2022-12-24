@@ -21,6 +21,7 @@
     #FFFACE
 
     <color name="Background" >#B5EAFD</color>
+    <color name="Background_Top" >#6AD6FD</color>
     <color name="SplashBackground" >#2196F3</color>
     <color name="BMI_Background" >#50ABF3</color>
     <color name="DarkBlueBackground" >#A7C6DF</color>
