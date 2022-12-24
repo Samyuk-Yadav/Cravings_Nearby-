@@ -32,19 +32,19 @@
             android:textSize="38sp"
             android:textStyle="bold" />
 
+
         <TextView
             android:id="@+id/cat_BMI_Value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/display_BMI_Value"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="BMI Sign"
+            android:layout_marginTop="19dp"
+            android:gravity="center"
+            android:text="Warning! Need Low Fat Food?"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="26dp"
             android:textStyle="bold" />
-
 
         <TextView
             android:id="@+id/display_BMI_Value"

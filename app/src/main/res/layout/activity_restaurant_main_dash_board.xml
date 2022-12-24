@@ -63,14 +63,14 @@
 
                 <TextView
                     android:id="@+id/user_name_Restaurant"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="23dp"
                     android:layout_marginBottom="10dp"
                     android:padding="1dp"
                     android:paddingHorizontal="2dp"
-                    android:text="UserName"
+                    android:text="Samyuk"
                     android:textAlignment="center"
                     android:textColor="@color/Redd"
                     android:textSize="21sp"
@@ -85,14 +85,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="16dp"
                     android:text="Craving? Order, Eat &amp; Enjoy"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="21sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/user_name_Restaurant"
-                    app:layout_constraintHorizontal_bias="0.343"
+                    app:layout_constraintEnd_toEndOf="@+id/hi"
+                    app:layout_constraintHorizontal_bias="0.183"
                     app:layout_constraintStart_toStartOf="@+id/hi"
                     app:layout_constraintTop_toBottomOf="@+id/hi" />
 
@@ -101,7 +101,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="1dp"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginEnd="2dp"
                     app:layout_constraintBottom_toTopOf="@+id/search_bar_progress"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.717"
@@ -331,7 +331,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btn_Profile"
+                    android:id="@+id/btn_Newsx"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -343,13 +343,13 @@
                         android:layout_height="30dp"
                         android:layout_gravity="bottom"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/account_img" />
+                        app:srcCompat="@drawable/news_image_vector" />
 
                     <TextView
                         android:id="@+id/text_btn_home2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Profile"
+                        android:text="News"
                         android:textStyle="bold"
                         android:textAlignment="center"
                         android:textColor="@color/black"
@@ -382,7 +382,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btn_chat"
+                    android:id="@+id/btn_chatx"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -408,7 +408,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btn_settings"
+                    android:id="@+id/btn_settingsx"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"

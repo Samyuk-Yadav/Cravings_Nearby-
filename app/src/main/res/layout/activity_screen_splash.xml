@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/BMI_Background"
+    android:background="@color/Background_Top"
     tools:context="Screen_Splash">
 
 
@@ -16,13 +16,13 @@
       android:layout_alignParentStart="true"
       android:layout_alignParentTop="true"
       android:layout_alignParentEnd="true"
-      android:layout_marginStart="20dp"
+      android:layout_marginStart="19dp"
       android:layout_marginLeft="20dp"
-      android:layout_marginTop="7dp"
-      android:layout_marginEnd="20dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="21dp"
       app:lottie_autoPlay="true"
       app:lottie_loop="true"
-      app:lottie_rawRes="@raw/logo" />
+      app:lottie_rawRes="@raw/choice2" />
 
   <TextView
       android:id="@+id/Title"

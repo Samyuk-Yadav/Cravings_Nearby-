@@ -4,7 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroud_img"
     tools:context=".Restaurant_Home_DashBoard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="11dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:text="Welcome Samyuk!"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/Redd"
+            android:textSize="37sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:layout_marginLeft="89dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/alatsi"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="3dp"
+            android:text="Your Features Waiting Here, For You To Explore"/>
+
+        <Button
+            android:id="@+id/button_order_food"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ad_banner_layout"
+            android:text="Order Food!"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_Watch_News"
+            android:layout_width="260dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ad_banner_layout"
+            android:text="Watch News"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_calculate_BMI"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ad_banner_layout"
+            android:text="Calculate BMI"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/dsfbv"
+                android:layout_width="221dp"
+                android:layout_height="155dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="4dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/support_food" />
+    </LinearLayout>
 
 
 

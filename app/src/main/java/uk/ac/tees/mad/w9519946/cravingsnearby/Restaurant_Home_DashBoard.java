@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,6 +28,30 @@ public class Restaurant_Home_DashBoard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         homeDashBoardBinding = ActivityRestaurantHomeDashBoardBinding.inflate(getLayoutInflater());
         setContentView(homeDashBoardBinding.getRoot());
+
+        homeDashBoardBinding.buttonOrderFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Restaurant_Home_DashBoard.this, "Look For Your cravings!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Restaurant_Home_DashBoard.this, Restaurant_Main_DashBoard.class));
+            }
+        });
+
+        homeDashBoardBinding.buttonWatchNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Restaurant_Home_DashBoard.this, "Watch What's Trending!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Restaurant_Home_DashBoard.this, Heading_News.class));
+            }
+        });
+
+        homeDashBoardBinding.buttonCalculateBMI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Restaurant_Home_DashBoard.this, "Calculate What's Right For You!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Restaurant_Home_DashBoard.this, Screen_BMI_Calculator.class));
+            }
+        });
 
         getSupportActionBar().setTitle("Welcome OnBoard! Peeps");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Background)));
@@ -52,6 +77,10 @@ public class Restaurant_Home_DashBoard extends AppCompatActivity {
                 Toast.makeText(this, "User Profile", Toast.LENGTH_SHORT).show();
                 Intent intent_User_Settings = new Intent(Restaurant_Home_DashBoard.this, Screen_Settings_user.class);
                 startActivity(intent_User_Settings);
+                break;
+
+            case R.id.user_notify:
+                Toast.makeText(this, "No New Notifications!", Toast.LENGTH_LONG).show();
                 break;
 
             case R.id.watch_News:

@@ -56,8 +56,8 @@ public class Restaurant_Main_DashBoard extends AppCompatActivity {
         String user_Nameeee = getIntent().getStringExtra("user_Name");
         String pic_Profileeee = getIntent().getStringExtra("pic_Profile");
 
-        user_name.setText(user_Nameeee);
-        Picasso.get().load(pic_Profileeee).placeholder(R.drawable.user_image).into(photo);
+        //user_name.setText(user_Nameeee);
+        //Picasso.get().load(pic_Profileeee).placeholder(R.drawable.user_image).into(photo);
 
        // detailsOfChatBinding.usernameChat.setText(user_Name);
        // Picasso.get().load(pic_Profile).placeholder(R.drawable.user_image).into(detailsOfChatBinding.profileImage);
@@ -81,11 +81,35 @@ public class Restaurant_Main_DashBoard extends AppCompatActivity {
 
         FloatingActionButton acting_floating_btn = findViewById(R.id.floating_Action_Buttonx);
         LinearLayout btn_Home = findViewById(R.id.btn_Homex);
+        LinearLayout btn_Chat = findViewById(R.id.btn_chatx);
+        LinearLayout btn_Settings = findViewById(R.id.btn_settingsx);
+        LinearLayout btn_News = findViewById(R.id.btn_Newsx);
 
         btn_Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Restaurant_Main_DashBoard.this, Restaurant_Main_DashBoard.class));
+            }
+        });
+
+        btn_Settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Restaurant_Main_DashBoard.this, Screen_Settings_user.class));
+            }
+        });
+
+        btn_Chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Restaurant_Main_DashBoard.this, Screen_Chat.class));
+            }
+        });
+
+        btn_News.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Restaurant_Main_DashBoard.this, Heading_News.class));
             }
         });
 

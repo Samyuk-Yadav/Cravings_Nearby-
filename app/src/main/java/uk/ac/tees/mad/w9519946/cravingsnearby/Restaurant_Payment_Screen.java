@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -40,11 +41,22 @@ public class Restaurant_Payment_Screen extends AppCompatActivity {
         getSupportActionBar().hide();
 
         //hooks
+        button_checkout = findViewById(R.id.button_checkout);
         cartShopping = new Cart_Shopping(this);
         payment_Screen();
         list_of_Orders();
         FinalCartValue();
         navigating_to_bottom();
+
+        button_checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Restaurant_Payment_Screen.this, "Order Placed Successfully!", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(Restaurant_Payment_Screen.this, Restaurant_Final_Screen.class));
+            }
+        });
+
+
     }
 
     private void navigating_to_bottom(){

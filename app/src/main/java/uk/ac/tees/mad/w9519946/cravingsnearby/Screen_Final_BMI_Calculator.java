@@ -52,6 +52,14 @@ public class Screen_Final_BMI_Calculator extends AppCompatActivity {
         lottieAnimationView = findViewById(R.id.animated_image);
         bmi_calculator = findViewById(R.id.bmi_calculator);
 
+        cat_BMI_Value.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent d  = new Intent(Screen_Final_BMI_Calculator.this, Restaurant_Main_DashBoard.class);
+                startActivity(d);
+            }
+        });
+
 
         bmi_calculator.setOnClickListener(new View.OnClickListener() {
             @Override
